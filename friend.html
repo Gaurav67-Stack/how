@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruhi</title>
+    <style>
+        body {
+           height: 100vh;
+              display: flex;
+              justify-content: center;
+                align-items: center;
+            background: linear-gradient(to right, #ff758c,#ff7eb3);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+           text-align: center;
+           background: white;
+           padding : 40px;
+           border-radius: 20px;
+              box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        h1{
+            margin-bottom: 30px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #yes{
+            background-color: #ff4d6d;
+            color: white;
+        }
+        #no{
+            background-color: #adb5bd;
+            color:white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Do you love me?</h1>
+        <button id="yes" onclick="yesClicked()">Yes</button>
+        <button id="no" onclick="noClicked()">No</button>
+    </div>
+    <script>
+        function noClicked() {
+            const noButton = document.getElementById('no');
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = x + 'px';
+            noButton.style.top = y + 'px';
+        }
+        function yesClicked() {
+        document.body.innerHTML = `
+            <div style="
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+                background: linear-gradient(to right, #ff758c, #ff7eb3);
+                color:white;
+                font-family: Arial;
+                text-align:center;
+            ">
+                <h1>Yayyy! 💖🥰</h1>
+                <h2>I knew you'd say YES 😍</h2>
+                <p>Happy Valentine's Day ❤️</p>
+                <img src=""C:\Users\Admin\OneDrive\Desktop\photo.jpeg">"
+            </div>
+        `;
+        }
+    </script>
+</body>
+</html>
